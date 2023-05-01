@@ -276,6 +276,17 @@ color: #000000;
 margin-bottom: 59px;
 
 }
+
+.slider_description_2 {
+  margin-top: 50px;
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+line-height: 30px;
+color: #000000;
+margin-bottom: 85px;
+}
 .slider_button {
 width: 174px;
 height: 34px;
@@ -396,7 +407,10 @@ position: fixed;
     text-align: center;
   }
   .slider_description {
-    margin-bottom: 90px;
+    margin-bottom: 120px;
+  }
+  .slider_description_2 {
+    margin-bottom: 110px;
   }
   .slider_button {
     display: flex;
