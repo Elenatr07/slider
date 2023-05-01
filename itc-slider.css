@@ -6,6 +6,54 @@
  * @license MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
  * @tutorial https://itchief.ru/javascript/slider
  */
+
+ .slick-slide{
+  width: 1440px;
+}
+
+* {
+      box-sizing: border-box;
+    }
+
+    .slider {
+        width: 100%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      max-width: 100%;
+      
+    }
+
+    .slick-prev:before {
+      background-image: url(img/left.svg);
+      display: block;
+      width: 70px;
+      height: 60px;
+      color: black;
+    }
+    .slick-next:before {
+      color: black;
+      background-image: url(img/right.svg);
+      display: block;
+      width: 70px;
+      height: 60px;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-current {
+      opacity: 1;
+    }
+
  *,
  *::before,
  *::after {
@@ -29,7 +77,7 @@
 
  .itc-slider__item {
    flex: 0 0 100%;
-   max-width: 100%;
+   max-width: 1440px;
    counter-increment: slide;
    height: 728px;
    position: relative;
@@ -67,16 +115,21 @@
 }
 .itc_slider_img {
   display: flex;
-  width: 100%;
+  width: 70%;
   justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  
+  
   
   
 }
 .slider_img {
-  width: 333px;
-  height: 309px;
+ 
   order: 1;
-  margin-top: 80px;
+  margin-top: 70px;
+  
+  
   
 }
 
@@ -195,11 +248,12 @@ margin: 0;
 }
 
 .slider_content {
-  max-width: 453px;
-  height: 100%;
+  
   margin-left: 125px;
   margin-top: 80px;
   order: 2;
+  max-width: 450px;
+ 
 }
 .slider_txt {
   font-family: 'Montserrat';
@@ -220,6 +274,7 @@ font-size: 15px;
 line-height: 30px;
 color: #000000;
 margin-bottom: 59px;
+
 }
 .slider_button {
 width: 174px;
@@ -267,29 +322,15 @@ margin-bottom: 0;
 }
 .block_slider_button{
   width: 100%;
+  bottom: 210px;
+position: fixed;
 }
 
-@media (max-width:1200px) {
+
+@media (max-width:1300px) {
+  
   .slider_content {
-    margin-left: 50px;
-  }
-.itc-slider__btn_prev {
-  left: 20px;
-
-}
-.itc-slider__btn_next {
- right: 20px;
-}
-
-}
-@media (max-width:1020px) {
-  .slider_img {
-    max-width: 266px;
-    max-height: 247px;
-    margin-left: 90px;
-  }
-  .slider_content {
-    margin-right: 90px;
+    
     margin-left: 20px;
   }
   .itc-slider__btn_prev::before, .itc-slider__btn::before {
@@ -298,16 +339,28 @@ margin-bottom: 0;
   }
 }
 
-@media (max-width:900px) {
-  .itc_slider_name {
+@media (max-width:1200px) {
+  .slider_content {
+    margin-left: 20px;
+    max-width: 350px;
     margin-top: 60px;
   }
-  .slider_img, .slider_content {
-    margin-top: 60px;
-  }
+.itc-slider__btn_prev {
+  left: 20px;
+
+}
+.itc-slider__btn_next {
+ right: 20px;
+}
+.slider_img {
+  width: 25%;
+height: 25%;
 }
 
-@media (max-width:780px) {
+}
+
+
+@media (max-width:1000px) {
   .slider_img {
     order: 2;
     margin-left: 0;
@@ -352,18 +405,20 @@ margin-bottom: 0;
   .block_slider_button {
     display: flex;
     justify-content: center;
+    position: static;
   }
   .itc-slider__btn_prev, .itc-slider__btn_next {
     display: none;
   }
   .slider_img {
     margin-top: 90px;
-    max-width: 320px;
-    max-height: 282px;
+    width: 333px;
+height: 309px
   }
   .itc-slider__indicator {
     margin-bottom: 121px;
   }
+  
   
   
 }
@@ -381,4 +436,5 @@ margin-bottom: 0;
     max-width: 266px;
     max-height: 247px;
   }
+
 }
